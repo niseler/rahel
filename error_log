@@ -1,0 +1,10 @@
+[Fri Feb 02 20:29:17.576820 2024] [authn_file:error] [pid 5537:tid 140509678872320] (2)No such file or directory: [client 87.122.89.225:39650] AH01620: Could not open password file: /.htpasswd
+[Fri Feb 02 20:29:24.229117 2024] [authn_file:error] [pid 5537:tid 140509670479616] (2)No such file or directory: [client 87.122.89.225:39660] AH01620: Could not open password file: /.htpasswd
+[Fri Feb 02 20:29:29.647602 2024] [authn_file:error] [pid 5537:tid 140509636908800] (2)No such file or directory: [client 87.122.89.225:39662] AH01620: Could not open password file: /.htpasswd
+[Fri Feb 02 20:29:40.316088 2024] [authn_file:error] [pid 5537:tid 140509712443136] (2)No such file or directory: [client 87.122.89.225:39664] AH01620: Could not open password file: /.htpasswd
+[Fri Feb 02 20:30:34.461477 2024] [authn_file:error] [pid 5537:tid 140509611730688] (2)No such file or directory: [client 87.122.89.225:39674] AH01620: Could not open password file: /.htpasswd
+[Fri Feb 02 20:30:40.783185 2024] [authn_file:error] [pid 5537:tid 140509628516096] (2)No such file or directory: [client 87.122.89.225:39672] AH01620: Could not open password file: /.htpasswd
+[Fri Feb 02 20:30:46.676208 2024] [authn_file:error] [pid 5447:tid 140509628516096] (2)No such file or directory: [client 87.122.89.225:39676] AH01620: Could not open password file: /.htpasswd
+[Fri Feb 02 20:30:53.399070 2024] [authn_file:error] [pid 5537:tid 140509670479616] (2)No such file or directory: [client 87.122.89.225:39678] AH01620: Could not open password file: /.htpasswd
+[Fri Feb 02 20:32:26.089295 2024] [authn_file:error] [pid 5447:tid 140509636908800] (2)No such file or directory: [client 87.122.89.225:39712] AH01620: Could not open password file: /.htpasswd
+[Fri Feb 02 20:46:01.564581 2024] [authn_file:error] [pid 5537:tid 140509737621248] (2)No such file or directory: [client 87.122.89.225:55537] AH01620: Could not open password file: /.htpasswd
