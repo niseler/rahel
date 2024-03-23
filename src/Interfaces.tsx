@@ -12,3 +12,10 @@ export interface SubNavElementInterface {
   active: boolean
   cb: (e: any) => void
 }
+
+export interface Get2KnowData {
+  header: string;
+  data: string[],
+  date: Date
+}
+
