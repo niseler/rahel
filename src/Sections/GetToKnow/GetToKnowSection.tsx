@@ -1,8 +1,10 @@
-import {NavElementInterface} from '../Interfaces.tsx'
-import { NavElementEnum } from '../NavElementEnum.tsx'
-import { January } from './GetToKnow/January.tsx'
-import { February } from './GetToKnow/February.tsx'
-import {March} from "./GetToKnow/March.tsx";
+import {NavElementInterface} from "../../Interfaces.tsx";
+import {NavElementEnum} from "../../Navigation/NavElementEnum.tsx";
+import {January} from "./January.tsx";
+import {February} from "./February.tsx";
+import {March} from "./March.tsx";
+import {April} from "./April.tsx";
+
 export const GetToKnowSection = (props: {
   elements: NavElementInterface[]
 }) => {
@@ -24,12 +26,14 @@ export const GetToKnowSection = (props: {
            <p> <a href={'#Januar'}>Januar</a></p>
            <p> <a href={'#Februar'}>Februar</a></p>
            <p> <a href={'#Maerz'}>März</a></p>
+           <p> <a href={'#April'}>April</a></p>
               <div className="my-3.5"> </div>
             <ul>
 
               <January/>
               <February/>
               <March/>
+              <April/>
             </ul>
           </div>
         </section>

@@ -1,5 +1,5 @@
-import { NavElementInterface } from '../Interfaces.tsx'
-import { NavElementEnum } from '../NavElementEnum.tsx'
+import {NavElementInterface} from "../../Interfaces.tsx";
+import {NavElementEnum} from "../../Navigation/NavElementEnum.tsx";
 
 export const ScienceSection = (props: { elements: NavElementInterface[] }) => {
   return (

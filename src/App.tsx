@@ -1,13 +1,13 @@
 import {NavElementInterface} from './Interfaces.tsx'
-import {StartSection} from './Sections/StartSection.tsx'
-import {LyricSection} from './Sections/LyricSection.tsx'
-import {GetToKnowSection} from './Sections/GetToKnowSection.tsx'
-import {ScienceSection} from './Sections/ScienceSection.tsx'
-import {ValentineSection} from './Sections/ValentineSection.tsx'
 import React, {useState} from 'react'
-import {NavElementEnum} from './NavElementEnum.tsx'
-import {EventSection} from "./Sections/EventSection.tsx";
 import {Header} from "./Header.tsx";
+import {NavElementEnum} from "./Navigation/NavElementEnum.tsx";
+import {EventSection} from "./Sections/Events/EventSection.tsx";
+import {GetToKnowSection} from "./Sections/GetToKnow/GetToKnowSection.tsx";
+import {LyricSection} from "./Sections/Lyrics/LyricSection.tsx";
+import {StartSection} from "./Sections/Start/StartSection.tsx";
+import {ScienceSection} from "./Sections/Science/ScienceSection.tsx";
+import {ValentineSection} from "./Sections/Valentine/ValentineSection.tsx";
 
 function App() {
     const cb = (e: React.ChangeEvent<HTMLElement>) => {
@@ -17,15 +17,10 @@ function App() {
         })
         setNavState(newEl)
     }
-
-    const navElementDefinition: NavElementInterface[] = [
-        {label: NavElementEnum.Start, active: true, cb: cb},
-        {label: NavElementEnum.Valentin, active: false, cb: cb},
-        {label: NavElementEnum.Lyrics, active: false, cb: cb},
-        {label: NavElementEnum.Kennenlernen, active: false, cb: cb},
-        {label: NavElementEnum.Science, active: false, cb: cb},
-        {label: NavElementEnum.Events, active: false, cb: cb},
-    ]
+    const navElementDefinition: NavElementInterface[] = [];
+    Object.values(NavElementEnum).forEach((navElement,idx   ) => {
+        navElementDefinition.push({label: navElement, active: idx ===0, cb: cb});
+    });
 
     const [navState, setNavState] = useState(navElementDefinition)
 
@@ -42,17 +37,5 @@ function App() {
     )
 }
 
-export const NavElement = (props: { element: NavElementInterface }) => {
-    const element = props.element
-    return (
-        <a
-            onClick={element.cb}
-            data-id={element.label}
-            className={element.active ? 'text-red-600 no-underline m-0.5 mx-1' : 'no-underline m-0.5 mx-1'}
-        >
-            {element.label}
-        </a>
-    )
-}
 
 export default App

@@ -1,5 +1,6 @@
-import { NavElementEnum } from './NavElementEnum.tsx'
+
 import { SubNavEnum } from './SubNavEnum.tsx'
+import {NavElementEnum} from "./Navigation/NavElementEnum.tsx";
 
 export interface NavElementInterface {
   label: NavElementEnum

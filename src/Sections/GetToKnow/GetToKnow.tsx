@@ -4,8 +4,8 @@ export const GetToKnow = (props: { header: string; data: string[] }) => {
       {props.header}
       <ul>
         <>
-          {props.data.map((item) => {
-            return <li className="list-disc text-left mx-4">{item}</li>
+          {props.data.map((item, idx) => {
+            return <li key={idx} className="list-disc text-left mx-4">{item}</li>
           })}
         </>
       </ul>

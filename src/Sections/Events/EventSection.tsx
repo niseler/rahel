@@ -1,7 +1,6 @@
-import { NavElementInterface } from '../Interfaces.tsx'
-import { NavElementEnum } from '../NavElementEnum.tsx'
-import {GetToKnow} from "./GetToKnow/GetToKnow.tsx";
-
+import {NavElementInterface} from "../../Interfaces.tsx";
+import {NavElementEnum} from "../../Navigation/NavElementEnum.tsx";
+import {GetToKnow} from "../GetToKnow/GetToKnow.tsx";
 
 export const EventSection = (props: { elements: NavElementInterface[] }) => {
     return (
@@ -38,6 +37,19 @@ export const EventSection = (props: { elements: NavElementInterface[] }) => {
                             'Am Abend gehen wir in die Sauna und lassen den Tag bei einem Glas Wein ausklingen',
                             'Am Sonntag frühstücken wir erneut im Hotel, checken aus und schaukeln auf der hoteleigenen Riesen-Schaukel',
                             'Auf der Rückfahrt machen wir nochmals einen Abstecher nach Weimar, bummeln im Park und gönnen uns ein Eis',
+                        ]}
+                    />
+                    <h1 className="font-bold">April</h1>
+                    <GetToKnow
+                        header={'Mi, 03.04. Julius Geburtstag'}
+                        data={[
+                            'nachdem ich morgens von euch zur Arbeit gefahren bin komme ich gegen 17 Uhr wieder zu euch',
+                            'da das Kino nur auf Vorbestellung lief schaut ihr Heimkino und ich steige mit ein',
+                            'im Anschluss findet die Party mit Discokugel, Musik und Tanzen statt',
+                            'auch eine Kissenschlacht darf nicht fehlen',
+                            'zum Abendbrot gibt es Burger, die wir auf Grund des Regens auf dem Balkon essen',
+                            'nachdem sich die Mädels auf ihr Zimmer zurückgezogen haben, haben wir noch ein paar ruhige Minuten für uns',
+                            'es war ein wirklich cooler Tag und ich freue mich schon auf die nächsten Events',
                         ]}
                     />
                 </div>

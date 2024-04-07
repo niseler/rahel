@@ -1,6 +1,5 @@
-
-import {NavElement} from "./App.tsx";
 import {NavElementInterface} from "./Interfaces.tsx";
+import {NavElement} from "./Navigation/NavElement.tsx";
 
 export const Header = (props: { navState: NavElementInterface[] }) => {
     return (

@@ -1,5 +1,5 @@
-import { NavElementInterface } from '../Interfaces.tsx'
-import { NavElementEnum } from '../NavElementEnum.tsx'
+import {NavElementEnum} from "../../Navigation/NavElementEnum.tsx";
+import {NavElementInterface} from "../../Interfaces.tsx";
 import {Timer} from "./Timer.tsx";
 
 export const ValentineSection = (props: {
