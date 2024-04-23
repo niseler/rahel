@@ -1,6 +1,37 @@
 {
   "singleQuote": true,
-  "semi": false,
+  "printWidth": 120,
+  "proseWrap": "always",
   "tabWidth": 2,
-  "printWidth": 80
+  "useTabs": false,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "semi": true,
+  "plugins": [],
+  "overrides": [
+    {
+      "files": [".prettierrc", ".prettierignore"],
+      "options": {
+        "parser": "json",
+        "tabWidth": 2,
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["package.json"],
+      "options": {
+        "parser": "json",
+        "bracketSpacing": false,
+        "tabWidth": 2,
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["*.json", "*.yml", "*.md", "*.yaml"],
+      "options": {
+        "tabWidth": 2,
+        "singleQuote": false
+      }
+    }
+  ]
 }

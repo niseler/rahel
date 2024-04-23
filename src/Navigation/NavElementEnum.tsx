@@ -4,5 +4,5 @@ export enum NavElementEnum {
   Lyrics = 'Lyrics',
   Kennenlernen = 'Kennenlernen',
   Science = 'Science',
-  Events = 'Events',
+  Events = 'Events'
 }

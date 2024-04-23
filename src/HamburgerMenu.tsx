@@ -1,21 +1,21 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 export interface HamburgerProps {
   /** Callback function, which should be executed on click */
-  onClick: () => void
+  onClick: () => void;
 
   /** Initial state of our button */
-  isInitiallyOpen?: boolean
+  isInitiallyOpen?: boolean;
 }
 
 export const HamburgerMenu = (props: HamburgerProps) => {
-  const { onClick, isInitiallyOpen } = props
-  const [isOpen, setIsOpen] = useState<boolean>(isInitiallyOpen ?? false)
+  const { onClick, isInitiallyOpen } = props;
+  const [isOpen, setIsOpen] = useState<boolean>(isInitiallyOpen ?? false);
 
   const handleClick = () => {
-    setIsOpen((prev) => !prev)
-    onClick()
-  }
+    setIsOpen((prev) => !prev);
+    onClick();
+  };
 
   return (
     <button
@@ -39,5 +39,5 @@ export const HamburgerMenu = (props: HamburgerProps) => {
         }`}
       />
     </button>
-  )
-}
+  );
+};

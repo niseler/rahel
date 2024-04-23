@@ -1,41 +1,30 @@
-import {NavElementEnum} from "../../Navigation/NavElementEnum.tsx";
-import {NavElementInterface} from "../../Interfaces.tsx";
-import {Timer} from "./Timer.tsx";
+import { NavElementEnum } from '../../Navigation/NavElementEnum.tsx';
+import { Timer } from './Timer.tsx';
+import { mainNavStore } from '../Nav/mainNavStore.ts';
 
-export const ValentineSection = (props: {
-  elements: NavElementInterface[]
-}) => {
+export const ValentineSection = () => {
+  const mainNav = mainNavStore((state) => state.value);
   return (
-    props.elements.find((element) => element.active)?.label ===
-      NavElementEnum.Valentin && (
+    mainNav === NavElementEnum.Valentin && (
       <>
         <section className="justify-center items-center bg-fce4ec pl-5 min-h-screen max-w-screen-md pb-10 bg-pink-200">
           <p>Liebe Rahel.</p>
           <p>Der Valentinstag steht vor der Tür. </p>
+          <p>Ich bin allerdings absolut kein Fan von diesem einmal-im-Jahr-Blumen-Schenken-Tag.</p>
           <p>
-            Ich bin allerdings absolut kein Fan von diesem
-            einmal-im-Jahr-Blumen-Schenken-Tag.
+            Ich finde, es sollte keines speziellen Tages bedürfen, um seiner Partnerin zu zeigen, was man für sie
+            empfindet.
+          </p>
+          <p>Aus diesem Grund bekommst du an diesem Tag auch keine Blumen, Pralinen oder sonstige Geschenke.</p>
+          <p>
+            An anderen Tagen, ohne gesellschaftlichen Zwang und ohne Erwartungshaltung, werde ich dir zeigen, was du mir
+            bedeutest.
           </p>
           <p>
-            Ich finde, es sollte keines speziellen Tages bedürfen, um seiner
-            Partnerin zu zeigen, was man für sie empfindet.
+            Diese Seite soll zum Beispiel ein kleines Zeichen meiner Zuneigung, unabhängig eines festgelegten Tages
+            sein.
           </p>
-          <p>
-            Aus diesem Grund bekommst du an diesem Tag auch keine Blumen,
-            Pralinen oder sonstige Geschenke.
-          </p>
-          <p>
-            An anderen Tagen, ohne gesellschaftlichen Zwang und ohne
-            Erwartungshaltung, werde ich dir zeigen, was du mir bedeutest.
-          </p>
-          <p>
-            Diese Seite soll zum Beispiel ein kleines Zeichen meiner Zuneigung,
-            unabhängig eines festgelegten Tages sein.
-          </p>
-          <p>
-            Ausgehend vom 21.01.2024, dem Tag unseres zweiten Dates und ersten
-            Kusses sind wir jetzt seit:
-          </p>
+          <p>Ausgehend vom 21.01.2024, dem Tag unseres zweiten Dates und ersten Kusses sind wir jetzt seit:</p>
           <div id="counter-container">
             <p id="counter"></p>
             <Timer specificDate={'2024-01-21T00:00:00'} />
@@ -68,5 +57,5 @@ export const ValentineSection = (props: {
         </section>
       </>
     )
-  )
-}
+  );
+};

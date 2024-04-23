@@ -5,10 +5,14 @@ export const GetToKnow = (props: { header: string; data: string[] }) => {
       <ul>
         <>
           {props.data.map((item, idx) => {
-            return <li key={idx} className="list-disc text-left mx-4">{item}</li>
+            return (
+              <li key={idx} className="list-disc text-left mx-4">
+                {item}
+              </li>
+            );
           })}
         </>
       </ul>
     </li>
-  )
-}
+  );
+};
