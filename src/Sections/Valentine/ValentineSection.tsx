@@ -1,13 +1,15 @@
 import { NavElementEnum } from '../../Navigation/NavElementEnum.tsx';
 import { Timer } from './Timer.tsx';
 import { mainNavStore } from '../Nav/mainNavStore.ts';
+import { SectionBody } from '../SectionBody.tsx';
 
 export const ValentineSection = () => {
   const mainNav = mainNavStore((state) => state.value);
+  const indieStyledLetter:string = 'text-gray-700 my-5 font-indie text-5xl';
   return (
     mainNav === NavElementEnum.Valentin && (
       <>
-        <section className="justify-center items-center bg-fce4ec pl-5 min-h-screen max-w-screen-md pb-10 bg-pink-200">
+        <SectionBody>
           <p>Liebe Rahel.</p>
           <p>Der Valentinstag steht vor der Tür. </p>
           <p>Ich bin allerdings absolut kein Fan von diesem einmal-im-Jahr-Blumen-Schenken-Tag.</p>
@@ -33,28 +35,28 @@ export const ValentineSection = () => {
           <table>
             <tbody>
               <tr>
-                <td className="text-gray-700 my-5 font-indie text-5xl">R</td>
+                <td className={indieStyledLetter}>R</td>
                 <td>omantisch</td>
               </tr>
               <tr>
-                <td className="text-gray-700 my-5 font-indie text-5xl">a</td>
+                <td className={indieStyledLetter}>a</td>
                 <td>temraubend</td>
               </tr>
               <tr>
-                <td className="text-gray-700 my-5 font-indie text-5xl">h</td>
+                <td className={indieStyledLetter}>h</td>
                 <td>erzlich</td>
               </tr>
               <tr>
-                <td className="text-gray-700 my-5 font-indie text-5xl">e</td>
+                <td className={indieStyledLetter}>e</td>
                 <td>loquent</td>
               </tr>
               <tr>
-                <td className="text-gray-700 my-5 font-indie text-5xl">l</td>
+                <td className={indieStyledLetter}>l</td>
                 <td>ebensfroh</td>
               </tr>
             </tbody>
           </table>
-        </section>
+        </SectionBody>
       </>
     )
   );

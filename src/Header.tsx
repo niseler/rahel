@@ -1,5 +1,4 @@
-import {NavElement} from './Navigation/NavElement.tsx';
-import {NavElementEnum} from "./Navigation/NavElementEnum.tsx";
+import { MainNav } from './Navigation/MainNav.tsx';
 
 export const Header = () => {
   return (
@@ -7,18 +6,12 @@ export const Header = () => {
       <div className="bg-fce4ec  max-w-screen-md sticky top-0 bg-fce4ec block max-w-screen-m">
         <header className="bg-gray-400">
           <div className="flex">
-            <img src="assets/heart.png" alt="Herz" width="48" height="48" />
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAETUlEQVR4nO2X2W7aaBTH8wYzj5ClIZClgbCvBgNm88ISQiD3nUfgqhqmfZJWvZlR36G9qTKvMKNezEg1ZrexkdqqEmdkjM0S20CBlJH8l84VkvU7Px9/32Fvz4gRI0aMbDsCcftUICsvBKp8LxBlWiDKX3m8RAv47QcBv3kxSBetqz6TjZI2FqVesijxgQ0TdC+Mf2URnGZDmXsWyfzWC6Uu1gbnsqWjAVl5K1CV4YCqwIAsg0CIdQsCXpIqcwN8+gb6qeI7PllEFoKjZIRDyfccSgGHksBGSGDDBLBhHFgEh14oM6puMD3sBVJ/sMH4wXfBD7J32IAsszK4BC+Cj+EzE3g+VQQ+dQ395PWQwwqve7HiTw/AEepnFqXezIBHRHBiBK7AB9NSBVLQ9Seh4030On4svjK8QFW+qVqfBk+L4EXgk9ej6icK0E/kgcPyf/GxrEV+Ho+SpyxK/T2BJ1St98bgMnzXl4CuNwEdN/at416yCWlsyqy+9TF4ahq8AH0sL1U8B1wsy3PxLMbFqASHUry69Yyq9a5Phseg44lDxx2HtjPaZd3I/mL7ZOXtytanwMfwwEWzwEapzyxKfZ4BX9J61yPDx6DjikHHGYW2Hf19idOmPJy3PgOuZj2uWB/Di6OiNes61r2z1kfgrqhoH9oOFFr2yLDrQM51Gii9XGy9oGtdgp8D17Lun7aOSdbdc9YdKLTtEamuwtC0ITXtBvDSn9NH41rWw2tYd06sy+Atm1gItC6D95oN8JkSM3s0alvnYgusI5uz3hLBrSJ8CJpPg7RmA/30zRd967klrOMLrCd0rKPq1q0h0bwID80L/xftN5As/iuD61unVrLenbPembEenR2XGesiuAwfgOZFAJrn/n90Gii81rWujIv+GrB56wHRvAgPzKnvlfZHnMqh61nXu5Aw1aOxPQKPQGvO+gh8Yh2aZz5onHqBOfWie3rhsPx7fesbuJAc89YR6SOdty6Cn/ugMYZvWDzvdOFHY4TlzVw0N1h8IakvX5ux7h/BK+BimT0D2uQ1L2xg9Baiubsdsg4NswfoE8/dUvBKExHi+TrLl7r18GrWLR5gzG6om5zPV4JXmggT1e1aD+hYd4/hXb9+F7zSRChT3dgaMG196mhsKOAT68yJa314Od1AprqJNeCB9TMV6ycyvGMz8JMmklV966tdSDPglol1xuSC+pMNwytNeLHqNq0zJuf24OW03bHqNqwzx48ArzThRKsrLF9j615N68yx4/HglSbskZpi3apl3adjXQR3Qn0Ef/W48HLEv3day9f8haRYN81Yh/rhD4JXmrgM1hatAQ+si+BP7D8eXk7zwl/TWgOUj1Q8YWTrRzsEL4c589aWsn50tXvwchiLu7bAOnw6tO4mvBzmxFnTsA6f9nccXg59bK9J4JJ1+sD2/4GXUz+0/UIf2D7S+9aP9f3LZ8oPRowYMWJkb4fyHzWnHNc2USodAAAAAElFTkSuQmCC" alt="Herz" width="48" height="48" />
             <h1 className="w-90 mx-auto text-center block">Für Rahel</h1>
-            <img src="assets/heart.png" alt="Herz" width="48" height="48" />
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAETUlEQVR4nO2X2W7aaBTH8wYzj5ClIZClgbCvBgNm88ISQiD3nUfgqhqmfZJWvZlR36G9qTKvMKNezEg1ZrexkdqqEmdkjM0S20CBlJH8l84VkvU7Px9/32Fvz4gRI0aMbDsCcftUICsvBKp8LxBlWiDKX3m8RAv47QcBv3kxSBetqz6TjZI2FqVesijxgQ0TdC+Mf2URnGZDmXsWyfzWC6Uu1gbnsqWjAVl5K1CV4YCqwIAsg0CIdQsCXpIqcwN8+gb6qeI7PllEFoKjZIRDyfccSgGHksBGSGDDBLBhHFgEh14oM6puMD3sBVJ/sMH4wXfBD7J32IAsszK4BC+Cj+EzE3g+VQQ+dQ395PWQwwqve7HiTw/AEepnFqXezIBHRHBiBK7AB9NSBVLQ9Seh4030On4svjK8QFW+qVqfBk+L4EXgk9ej6icK0E/kgcPyf/GxrEV+Ho+SpyxK/T2BJ1St98bgMnzXl4CuNwEdN/at416yCWlsyqy+9TF4ahq8AH0sL1U8B1wsy3PxLMbFqASHUry69Yyq9a5Phseg44lDxx2HtjPaZd3I/mL7ZOXtytanwMfwwEWzwEapzyxKfZ4BX9J61yPDx6DjikHHGYW2Hf19idOmPJy3PgOuZj2uWB/Di6OiNes61r2z1kfgrqhoH9oOFFr2yLDrQM51Gii9XGy9oGtdgp8D17Lun7aOSdbdc9YdKLTtEamuwtC0ITXtBvDSn9NH41rWw2tYd06sy+Atm1gItC6D95oN8JkSM3s0alvnYgusI5uz3hLBrSJ8CJpPg7RmA/30zRd967klrOMLrCd0rKPq1q0h0bwID80L/xftN5As/iuD61unVrLenbPembEenR2XGesiuAwfgOZFAJrn/n90Gii81rWujIv+GrB56wHRvAgPzKnvlfZHnMqh61nXu5Aw1aOxPQKPQGvO+gh8Yh2aZz5onHqBOfWie3rhsPx7fesbuJAc89YR6SOdty6Cn/ugMYZvWDzvdOFHY4TlzVw0N1h8IakvX5ux7h/BK+BimT0D2uQ1L2xg9Baiubsdsg4NswfoE8/dUvBKExHi+TrLl7r18GrWLR5gzG6om5zPV4JXmggT1e1aD+hYd4/hXb9+F7zSRChT3dgaMG196mhsKOAT68yJa314Od1AprqJNeCB9TMV6ycyvGMz8JMmklV966tdSDPglol1xuSC+pMNwytNeLHqNq0zJuf24OW03bHqNqwzx48ArzThRKsrLF9j615N68yx4/HglSbskZpi3apl3adjXQR3Qn0Ef/W48HLEv3day9f8haRYN81Yh/rhD4JXmrgM1hatAQ+si+BP7D8eXk7zwl/TWgOUj1Q8YWTrRzsEL4c589aWsn50tXvwchiLu7bAOnw6tO4mvBzmxFnTsA6f9nccXg59bK9J4JJ1+sD2/4GXUz+0/UIf2D7S+9aP9f3LZ8oPRowYMWJkb4fyHzWnHNc2USodAAAAAElFTkSuQmCC" alt="Herz" width="48" height="48" />
           </div>
         </header>
-        <nav className="bg-gray-400">
-          {
-            Object.values(NavElementEnum).map((navElement, idx) => {
-              return <NavElement key={idx} element={navElement}></NavElement>;
-            })
-          }
-        </nav>
+        <MainNav />
       </div>
     </>
   );

@@ -1,12 +1,13 @@
 import { NavElementEnum } from '../../Navigation/NavElementEnum.tsx';
 import { mainNavStore } from '../Nav/mainNavStore.ts';
+import { SectionBody } from '../SectionBody.tsx';
 
 export const StartSection = () => {
   const mainNav = mainNavStore((state) => state.value);
   return (
     mainNav === NavElementEnum.Start && (
       <>
-        <section className="justify-center items-center bg-fce4ec pl-5 min-h-screen max-w-screen-md pb-10 bg-pink-200">
+        <SectionBody>
           <p>
             Da ich nicht gut basteln kann habe ich mich entschlossen eine kleine Webseite für dich zu erstellen. Ich
             hoffe, sie gefällt dir.
@@ -18,7 +19,7 @@ export const StartSection = () => {
           </p>
           <p>Aber für dich mache ich das sehr gern und hoffe dir eine kleine Freude machen zu können.</p>
           <p>Bitte beachte die Hinweise unter dem Menüpunkt Valentinstag</p>
-        </section>
+        </SectionBody>
       </>
     )
   );

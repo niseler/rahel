@@ -1,18 +1,24 @@
 import { NavElementEnum } from '../../Navigation/NavElementEnum.tsx';
 import { mainNavStore } from '../Nav/mainNavStore.ts';
+import { cn } from '../../tools/utils.ts';
+import { SectionBody } from '../SectionBody.tsx';
+import { Intro } from '../Common/Intro.tsx';
 
 export const ScienceSection = () => {
   const mainNav = mainNavStore((state) => state.value);
+  const large = cn('text-xl');
+  const green = cn('text-green-600', large);
+  const red = cn('text-red-600', large);
   return (
     mainNav === NavElementEnum.Science && (
       <>
-        <section className="justify-center items-center bg-fce4ec pl-5 min-h-screen max-w-screen-md pb-10 bg-pink-200">
-          <div className="intro">
+        <SectionBody>
+          <Intro>
             <p>
               An dieser Stelle trage ich Wissenschaftliche Erkenntnisse zusammen, welche ich durch dich / mit dir
-              gesammelt habe{' '}
+              gesammelt habe:
             </p>
-          </div>
+          </Intro>
 
           <h2>Die Formel für das Maß der Verliebtheit von Spaziergängern</h2>
           <ul>
@@ -20,24 +26,23 @@ export const ScienceSection = () => {
               Diese ist so einfach wie genial: Man zählt die Küsse während des Spaziergangs bei gleichzeitiger
               Ermittlung der Stecke
             </li>
-            <li>Hieraus lässt sich folgende Formel ableiten:
-              <b className="text-red-600 text-xl">KF</b> = <b className="text-green-600 text-xl">K </b>
-              / <b className="text-green-600 text-xl">s</b></li>
+            <li>
+              Hieraus lässt sich folgende Formel ableiten:
+              <b className={green}>KF</b> = <b className={green}>K </b> / <b className={green}>s</b>
+            </li>
             <li>
               oder ausgeschrieben:
-              <b className="text-red-600 text-xl">K</b>nutsch
-              <b className="text-red-600 text-xl">F</b>aktor =
-              <b className="text-green-600 text-xl">K</b>üsse /
-              zurückgelegter
-              <b className='text-green-600 text-xl'>S</b>trecke
+              <b className={red}>K</b>nutsch
+              <b className={red}>F</b>aktor =<b className={green}>K</b>üsse / zurückgelegter
+              <b className={green}>S</b>trecke
             </li>
             <li>Im ersten gemeinsamen Experiment stellen wir fest, dass ein KF von 5 K/km ein guter Richtwert ist</li>
             <li>dies entspricht 10 mal Küssen auf 2 km</li>
             <li>
               gleichzeitig kann man durch Umstellung der Formel den
-              <b className="text-red-600 text-xl">W</b>eg-
-              <b className="text-red-600 text-xl">K</b>nutsch-
-              <b className="text-red-600 text-xl">I</b>dex , kurz WKI berechnen
+              <b className={red}>W</b>eg-
+              <b className={red}>K</b>nutsch-
+              <b className={red}>I</b>dex , kurz <b className={red}>WKI </b>berechnen
             </li>
             <li>
               hierzu nimmt man einfach den reziproken Wert des KF, also 1/KF oder zurückgelegte <b>S</b>trecke /{' '}
@@ -53,7 +58,7 @@ export const ScienceSection = () => {
               </ul>
             </li>
           </ul>
-        </section>
+        </SectionBody>
       </>
     )
   );

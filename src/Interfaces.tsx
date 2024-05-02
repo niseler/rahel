@@ -1,3 +1,4 @@
+// noinspection JSUnusedGlobalSymbols
 export enum LyricNavEnum {
   First = 'erstes Gedicht',
   Bus = 'Busgedicht',
@@ -10,7 +11,8 @@ export enum MonthNavEnum {
   January = 'Januar',
   February = 'Februar',
   March = 'März',
-  April = 'April'
+  April = 'April',
+  May = 'Mai'
 }
 
 export interface Get2KnowData {

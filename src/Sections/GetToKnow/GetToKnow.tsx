@@ -1,4 +1,9 @@
-export const GetToKnow = (props: { header: string; data: string[] }) => {
+export interface ToKnow {
+  header: string;
+  data: string[];
+}
+
+export const GetToKnow = (props: ToKnow) => {
   return (
     <li className="list-none text-left py-3">
       {props.header}
