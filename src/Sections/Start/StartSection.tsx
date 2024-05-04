@@ -1,13 +1,17 @@
 import { NavElementEnum } from '../../Navigation/NavElementEnum.tsx';
 import { mainNavStore } from '../Nav/mainNavStore.ts';
 import { SectionBody } from '../SectionBody.tsx';
+import { Headline } from '../Common/Headline.tsx';
+import { EmptyNav } from '../Nav/EmptyNav.tsx';
 
 export const StartSection = () => {
   const mainNav = mainNavStore((state) => state.value);
   return (
     mainNav === NavElementEnum.Start && (
       <>
+        <EmptyNav />
         <SectionBody>
+          <Headline text={'Start'} />
           <p>
             Da ich nicht gut basteln kann habe ich mich entschlossen eine kleine Webseite für dich zu erstellen. Ich
             hoffe, sie gefällt dir.

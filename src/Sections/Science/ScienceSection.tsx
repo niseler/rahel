@@ -3,6 +3,8 @@ import { mainNavStore } from '../Nav/mainNavStore.ts';
 import { cn } from '../../tools/utils.ts';
 import { SectionBody } from '../SectionBody.tsx';
 import { Intro } from '../Common/Intro.tsx';
+import { Headline } from '../Common/Headline.tsx';
+import { EmptyNav } from '../Nav/EmptyNav.tsx';
 
 export const ScienceSection = () => {
   const mainNav = mainNavStore((state) => state.value);
@@ -12,7 +14,9 @@ export const ScienceSection = () => {
   return (
     mainNav === NavElementEnum.Science && (
       <>
+        <EmptyNav />
         <SectionBody>
+          <Headline text={'Science'} />
           <Intro>
             <p>
               An dieser Stelle trage ich Wissenschaftliche Erkenntnisse zusammen, welche ich durch dich / mit dir

@@ -6,12 +6,12 @@ type ActiveMainNav = {
 };
 
 export const mainNavStore = create<ActiveMainNav>()(() => ({
-    value: NavElementEnum.Start
+  value: NavElementEnum.Start
 }));
 
 export const setMainNav = (data: ActiveMainNav) => {
-    setState(data);
-}
+  setState(data);
+};
 
 /* STORE UTILITIES */
 export const setState = mainNavStore.setState;

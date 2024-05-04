@@ -8,19 +8,20 @@ import First from './input/first.json';
 import Pause from './input/pause.json';
 import Wait from './input/wait.json';
 import Untenrum from './input/untenrum.json';
+import Miss from './input/miss.json';
 import { Lyric, LyricsProps } from './Lyric.tsx';
 
 export const LyricSection = () => {
   const activeNav = useLyricsNavStore((state) => state.value);
   const activeMainNav = mainNavStore((state) => state.value);
-  const lyricPages: LyricsProps[] = [Bus, First, Untenrum, Pause, Wait];
+  const lyricPages: LyricsProps[] = [Bus, First, Untenrum, Pause, Wait, Miss];
 
   return (
     activeMainNav === NavElementEnum.Lyrics && (
       <>
         <LyricsSubNav />
         <SectionBody>
-          {lyricPages.map((lyric) => activeNav.toString() == lyric.nav && <Lyric key={lyric.nav} lp={lyric} />)}
+          {lyricPages.map((lyric) => activeNav.toString() === lyric.nav && <Lyric key={lyric.nav} lp={lyric} />)}
         </SectionBody>
       </>
     )

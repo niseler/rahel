@@ -2,14 +2,18 @@ import { NavElementEnum } from '../../Navigation/NavElementEnum.tsx';
 import { Timer } from './Timer.tsx';
 import { mainNavStore } from '../Nav/mainNavStore.ts';
 import { SectionBody } from '../SectionBody.tsx';
+import { Headline } from '../Common/Headline.tsx';
+import { EmptyNav } from '../Nav/EmptyNav.tsx';
 
 export const ValentineSection = () => {
   const mainNav = mainNavStore((state) => state.value);
-  const indieStyledLetter:string = 'text-gray-700 my-5 font-indie text-5xl';
+  const indieStyledLetter: string = 'text-gray-700 my-5 font-indie text-5xl';
   return (
     mainNav === NavElementEnum.Valentin && (
       <>
+        <EmptyNav />
         <SectionBody>
+          <Headline text={'Valentinstag'} />
           <p>Liebe Rahel.</p>
           <p>Der Valentinstag steht vor der Tür. </p>
           <p>Ich bin allerdings absolut kein Fan von diesem einmal-im-Jahr-Blumen-Schenken-Tag.</p>

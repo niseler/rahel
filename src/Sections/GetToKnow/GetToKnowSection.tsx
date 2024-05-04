@@ -9,6 +9,7 @@ import { Month, MonthProps } from './Month.tsx';
 import { Get2KSubNav } from '../Nav/Get2KSubNav.tsx';
 import { mainNavStore } from '../Nav/mainNavStore.ts';
 import { SectionBody } from '../SectionBody.tsx';
+import { Headline } from '../Common/Headline.tsx';
 
 januar.monthId = MonthNavEnum.January;
 februar.monthId = MonthNavEnum.February;
@@ -23,6 +24,7 @@ export const GetToKnowSection = () => {
       <>
         <Get2KSubNav />
         <SectionBody>
+          <Headline text={'Kennenlernen'} />
           <Month monthProps={januar as MonthProps} />
           <Month monthProps={februar as MonthProps} />
           <Month monthProps={march as MonthProps} />

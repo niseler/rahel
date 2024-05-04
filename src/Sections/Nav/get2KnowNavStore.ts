@@ -1,18 +1,17 @@
-import {create} from "zustand";
-import {MonthNavEnum} from "../../Interfaces.tsx";
+import { create } from 'zustand';
+import { MonthNavEnum } from '../../Interfaces.tsx';
 
 type ActiveMonthNav = {
-    value: MonthNavEnum;
-}
+  value: MonthNavEnum;
+};
 
 export const useGet2KnowNavStore = create<ActiveMonthNav>()(() => ({
-    value: MonthNavEnum.January
+  value: MonthNavEnum.January
 }));
 
 export const setMonthNav = (data: ActiveMonthNav) => {
-    setState(data);
-}
-
+  setState(data);
+};
 
 /* STORE UTILITIES */
 export const setState = useGet2KnowNavStore.setState;

@@ -1,17 +1,17 @@
-import {create} from "zustand";
-import {LyricNavEnum} from "../../Interfaces.tsx";
+import { create } from 'zustand';
+import { LyricNavEnum } from '../../Interfaces.tsx';
 
 type ActiveNav = {
-    value: string;
-}
+  value: string;
+};
 
 export const useLyricsNavStore = create<ActiveNav>()(() => ({
-    value: LyricNavEnum.First
+  value: LyricNavEnum.First
 }));
 
 export const setLyricsNav = (data: ActiveNav) => {
-    setState(data);
-}
+  setState(data);
+};
 
 /* STORE UTILITIES */
 export const setState = useLyricsNavStore.setState;

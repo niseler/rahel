@@ -4,7 +4,8 @@ export enum LyricNavEnum {
   Bus = 'Busgedicht',
   Wait = 'Warten',
   Pause = 'Pause',
-  Untenrum = 'Untenrum'
+  Untenrum = 'Untenrum',
+  Miss = 'Vermissen'
 }
 
 export enum MonthNavEnum {

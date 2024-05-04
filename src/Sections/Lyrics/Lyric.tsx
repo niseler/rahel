@@ -1,19 +1,19 @@
 import { Intro } from '../Common/Intro.tsx';
 import { Spacer } from '../Common/Spacer.tsx';
+import { Headline } from '../Common/Headline.tsx';
 
 export interface LyricsProps {
-    nav: string;
-    intro: string;
-    verse: string[][];
+  nav: string;
+  intro: string;
+  verse: string[][];
 }
 
 export const Lyric = (props: { lp: LyricsProps }) => {
   const lp = props.lp;
   return (
     <>
-      <Intro>
-        {lp.intro}
-      </Intro>
+      <Headline text={'Lyrics'} />
+      <Intro>{lp.intro}</Intro>
       <div>
         {lp.verse.map((verse, index) => {
           return (
@@ -25,7 +25,6 @@ export const Lyric = (props: { lp: LyricsProps }) => {
             </div>
           );
         })}
-
       </div>
     </>
   );
