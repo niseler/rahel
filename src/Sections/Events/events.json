@@ -49,6 +49,53 @@
           ]
         }
       ]
+    },
+    {
+      "title": "Mai",
+      "toKnow": [
+        {
+          "header": "Fr, 10.05, Himmelfahrt",
+          "data": [
+            "du kommst mich mit Julius zum Ausflug in Geyer besuchen",
+            "wir machen eine schöne Bootstour mit einem Tretboot",
+            "Nachmittags bist du müde und legst dich für eine Weile im Bungalow hin ;-)",
+            "die Kids schauen ganz gespannt durchs Fenster"
+          ]
+        },
+        {
+          "header": "Mo, 20.05, Pfingstmontag bei Karls",
+          "data": [
+            "nachdem du mit Juli bei uns übernachtet hast, fahren wir gemeinsam zu Karls nach Döbeln",
+            "das erste Abenteuer besteht schon darin einen Parkplatz zu finden",
+            "auch wenn sehr viele Menschen unterwegs sind, haben wir einen schönen Tag",
+            "Abends essen wir zusammen Nudeln und ihr entschließt euch noch eine Nacht bei uns zu schlafen"
+          ]
+        },
+        {
+          "header": "Do, 23.05, Candlelight Konzert, Soundtracks von Hans Zimmer",
+          "data": [
+            "wir sind zum Candlelight Konzert in der Peterskirche",
+            "es werden Soundtracks von Hans Zimmer gespielt",
+            "auch hier lässt es sich super knutschen",
+            "im Anschluss fahren wir zu dir und ich übernachte bei dir"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Juni",
+      "toKnow": [
+        {
+          "header": "Sa, 08. Juni Fela und Stummfilm auf der Warze",
+          "data": [
+            "wir chillen den ganzen Tag entspannt bei dir auf dem Balkon",
+            "Abends essen wir gemütlich im Fela und genießen die Live-Musik eines Konzerts in der Nähe",
+            "Anschließend essen wir noch ein Eis im Park und genießen die letzten Sonnenstrahlen",
+            "gegen 21:30 beginnt die Filmvorführung bei der wir uns teilweise mehr über unseren Sitznachbarn amüsieren als über den Film",
+            "der Abschluss des Tages bzw schon den Neuanfang des nächstens findet auf dem Balkon mit Wein statt. "
+          ]
+        }
+      ]
     }
   ]
 }

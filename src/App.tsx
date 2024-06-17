@@ -16,6 +16,7 @@ function App() {
       <ScienceSection />
       <ValentineSection />
       <EventSection />
+      {/*<Chat />*/}
     </>
   );
 }
