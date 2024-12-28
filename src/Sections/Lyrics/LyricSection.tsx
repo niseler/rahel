@@ -9,12 +9,13 @@ import Pause from './input/pause.json';
 import Wait from './input/wait.json';
 import Untenrum from './input/untenrum.json';
 import Miss from './input/miss.json';
+import Christmas from './input/christmas.json';
 import { Lyric, LyricsProps } from './Lyric.tsx';
 
 export const LyricSection = () => {
   const activeNav = useLyricsNavStore((state) => state.value);
   const activeMainNav = mainNavStore((state) => state.value);
-  const lyricPages: LyricsProps[] = [Bus, First, Untenrum, Pause, Wait, Miss];
+  const lyricPages: LyricsProps[] = [Bus, First, Untenrum, Pause, Wait, Miss, Christmas];
 
   return (
     activeMainNav === NavElementEnum.Lyrics && (
