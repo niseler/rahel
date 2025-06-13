@@ -5,6 +5,7 @@ import { LyricSection } from './Sections/Lyrics/LyricSection.tsx';
 import { StartSection } from './Sections/Start/StartSection.tsx';
 import { ScienceSection } from './Sections/Science/ScienceSection.tsx';
 import { ValentineSection } from './Sections/Valentine/ValentineSection.tsx';
+import { Sophia } from './Sections/Sophia/Sophia.tsx';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <ScienceSection />
       <ValentineSection />
       <EventSection />
+      <Sophia />
       {/*<Chat />*/}
     </>
   );

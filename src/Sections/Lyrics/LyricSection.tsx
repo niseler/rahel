@@ -1,5 +1,4 @@
 import { NavElementEnum } from '../../Navigation/NavElementEnum.tsx';
-import { LyricsSubNav } from '../Nav/LyricsSubNav.tsx';
 import { useLyricsNavStore } from '../Nav/lyricsNavStore.ts';
 import { mainNavStore } from '../Nav/mainNavStore.ts';
 import { SectionBody } from '../SectionBody.tsx';
@@ -11,6 +10,7 @@ import Untenrum from './input/untenrum.json';
 import Miss from './input/miss.json';
 import Christmas from './input/christmas.json';
 import { Lyric, LyricsProps } from './Lyric.tsx';
+import ScrollableNav from '../Nav/ScrollableNav.tsx';
 
 export const LyricSection = () => {
   const activeNav = useLyricsNavStore((state) => state.value);
@@ -20,7 +20,7 @@ export const LyricSection = () => {
   return (
     activeMainNav === NavElementEnum.Lyrics && (
       <>
-        <LyricsSubNav />
+        <ScrollableNav />
         <SectionBody>
           {lyricPages.map((lyric) => activeNav.toString() === lyric.nav && <Lyric key={lyric.nav} lp={lyric} />)}
         </SectionBody>
