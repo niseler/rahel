@@ -24,6 +24,14 @@ const StartSectionComponent = () => {
           </p>
           <p>Aber für dich mache ich das sehr gern und hoffe dir eine kleine Freude machen zu können.</p>
           <p>Bitte beachte die Hinweise unter dem Menüpunkt Valentinstag</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>Update 17.Juli 2026</p>
+          <p>Der Counter sagt wir sind jetzt seit 29 Monaten und 25 Tagen zusammen</p>
+          <p>Und es ist so schön, dass immer noch die selben Schmetterlinge wie an Anfang in mir wohnen </p>
+          <p>Sie machen sich bemerkbar wenn ich mich an dich kuschel, dich Küsse, mit dir telefoniere, ein Bild von dir ansehe, auf den
+          Weg zu bin an dich denke und in noch so vielen anderen Sitiuationen.</p>
+          <p>Du bist mein Schatz und ich LIEBE dich über alles auf der Welt</p>
         </SectionBody>
       </>
     )
