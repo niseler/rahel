@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect } from "react";
-import { LyricNavEnum } from '../../Interfaces.tsx';
 import { setLyricsNav, useLyricsNavStore } from './lyricsNavStore.ts';
 import { cn } from '../../tools/utils.ts';
 
@@ -8,6 +7,17 @@ const ScrollableNav = () => {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
   const activeNav = useLyricsNavStore((state) => state.value);
+  const [navItems, setNavItems] = useState<string[]>([]);
+
+  useEffect(() => {
+    const loadNavItems = async () => {
+      const lyricModules = import.meta.glob('../Lyrics/input/*.json', { eager: true });
+      const lyrics = Object.values(lyricModules) as { nav: string }[];
+      const sortedNavItems = lyrics.map(lyric => lyric.nav).sort((a, b) => a.localeCompare(b));
+      setNavItems(sortedNavItems);
+    };
+    loadNavItems();
+  }, []);
 
   const updateScrollState = () => {
     if (scrollContainerRef.current) {
@@ -19,7 +29,7 @@ const ScrollableNav = () => {
 
   const scroll = (direction: string) => {
     if (scrollContainerRef.current) {
-      const scrollAmount = direction === 'left' ? -100 : 100; // Adjust the scroll distance
+      const scrollAmount = direction === 'left' ? -100 : 100;
       scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
@@ -57,18 +67,15 @@ const ScrollableNav = () => {
         ref={scrollContainerRef}
         className="overflow-x-auto no-scrollbar whitespace-nowrap flex items-center scroll-smooth"
       >
-
-        {Object.values(LyricNavEnum).map((element) => {
-          return (
-            <a
-              key={element}
-              onClick={(_e) => setLyricsNav({ value: element })}
-              className={cn('no-underline p-1 mx-0.5 py-0.5 text-blue-500 inline-block', { 'text-green-500': activeNav === element })}
-            >
-              {element}
-            </a>
-          );
-        })}
+        {navItems.map((element) => (
+          <a
+            key={element}
+            onClick={(_e) => setLyricsNav({ value: element })}
+            className={cn('no-underline p-1 mx-0.5 py-0.5 text-blue-500 inline-block', { 'text-green-500': activeNav === element })}
+          >
+            {element}
+          </a>
+        ))}
       </nav>
 
       {/* Rechter Pfeil */}

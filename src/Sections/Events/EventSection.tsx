@@ -6,13 +6,14 @@ import { SectionBody } from '../SectionBody.tsx';
 import { Intro } from '../Common/Intro.tsx';
 import { Headline } from '../Common/Headline.tsx';
 import { EmptyNav } from '../Nav/EmptyNav.tsx';
+import { withErrorBoundary } from '../../components/withErrorBoundary';
 
 interface Section {
   toKnow: ToKnow[];
   title: string;
 }
 
-export const EventSection = () => {
+const EventSectionComponent = () => {
   const mainNav = mainNavStore((state) => state.value);
   return (
     mainNav === NavElementEnum.Events && (
@@ -43,3 +44,7 @@ export const EventSection = () => {
     )
   );
 };
+
+export const EventSection = withErrorBoundary(EventSectionComponent, {
+  componentName: 'EventSection'
+});

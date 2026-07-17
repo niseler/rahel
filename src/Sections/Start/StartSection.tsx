@@ -3,8 +3,9 @@ import { mainNavStore } from '../Nav/mainNavStore.ts';
 import { SectionBody } from '../SectionBody.tsx';
 import { Headline } from '../Common/Headline.tsx';
 import { EmptyNav } from '../Nav/EmptyNav.tsx';
+import { withErrorBoundary } from '../../components/withErrorBoundary';
 
-export const StartSection = () => {
+const StartSectionComponent = () => {
   const mainNav = mainNavStore((state) => state.value);
   return (
     mainNav === NavElementEnum.Start && (
@@ -28,3 +29,7 @@ export const StartSection = () => {
     )
   );
 };
+
+export const StartSection = withErrorBoundary(StartSectionComponent, {
+  componentName: 'StartSection'
+});

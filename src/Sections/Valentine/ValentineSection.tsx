@@ -4,8 +4,9 @@ import { mainNavStore } from '../Nav/mainNavStore.ts';
 import { SectionBody } from '../SectionBody.tsx';
 import { Headline } from '../Common/Headline.tsx';
 import { EmptyNav } from '../Nav/EmptyNav.tsx';
+import { withErrorBoundary } from '../../components/withErrorBoundary';
 
-export const ValentineSection = () => {
+const ValentineSectionComponent = () => {
   const mainNav = mainNavStore((state) => state.value);
   const indieStyledLetter: string = 'text-gray-700 my-5 font-indie text-5xl';
   return (
@@ -65,3 +66,7 @@ export const ValentineSection = () => {
     )
   );
 };
+
+export const ValentineSection = withErrorBoundary(ValentineSectionComponent, {
+  componentName: 'ValentineSection'
+});

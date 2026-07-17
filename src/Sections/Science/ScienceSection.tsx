@@ -5,8 +5,9 @@ import { SectionBody } from '../SectionBody.tsx';
 import { Intro } from '../Common/Intro.tsx';
 import { Headline } from '../Common/Headline.tsx';
 import { EmptyNav } from '../Nav/EmptyNav.tsx';
+import { withErrorBoundary } from '../../components/withErrorBoundary';
 
-export const ScienceSection = () => {
+const ScienceSectionComponent = () => {
   const mainNav = mainNavStore((state) => state.value);
   const large = cn('text-xl');
   const green = cn('text-green-600', large);
@@ -67,3 +68,7 @@ export const ScienceSection = () => {
     )
   );
 };
+
+export const ScienceSection = withErrorBoundary(ScienceSectionComponent, {
+  componentName: 'ScienceSection'
+});
